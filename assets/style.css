@@ -1,0 +1,131 @@
+/* Definizioni dei Colori Aziendali (per facile riferimento) */
+:root {
+    --acus-navy: rgb(31, 44, 82);   /* Blu Scuro: Header, Bordi Quiz */
+    --text-gray: rgb(63, 68, 68);   /* Grigio Scuro: Testo standard */
+    --acus-red: rgb(249, 56, 34);   /* Rosso: Pulsanti CTA */
+    --background-light: #f9f9f9;    /* Sfondo generale */
+}
+
+/* Stili Globali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px; /* Spazio necessario per l'header fisso */
+    background-color: var(--background-light);
+    color: var(--text-gray);
+}
+
+/* Container centrale per allineamento */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === 1. HEADER FISSO (Barra Blu Scuro: RGB 31, 44, 82) === */
+
+#main-header {
+    position: fixed; /* Rende la barra fissa */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--acus-navy); 
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    /* Utilizza il container per la larghezza e centra il contenuto */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 40px; /* Dimensione del tuo logo */
+    margin-right: 15px;
+}
+
+#main-header h1 {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+}
+
+#main-header nav {
+    margin-left: auto; /* Sposta i link a destra */
+}
+
+#main-header nav a {
+    color: white; /* Testo bianco sui link di navigazione */
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+/* === 2. SEZIONE DI BENVENUTO E BANNER (Prima Barra/Sfondo) === */
+
+#banner-container {
+    /* L'immagine del banner rosso e bianco verrà visualizzata come sfondo qui */
+    background-image: url('banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Altezza del banner */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.overlay-content {
+    /* Contenuto centrato SOPRA l'immagine */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 20px;
+}
+
+.overlay-content h2 {
+    color: white;
+    font-size: 2.5em;
+}
+
+/* === 3. RETTANGOLO QUIZ (Contenitore principale) === */
+
+#quiz-rectangle {
+    background-color: white;
+    border: 2px solid var(--acus-navy);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px; /* Rende il rettangolo più stretto per centrare l'attenzione */
+    margin: 0 auto 50px auto; /* Centra orizzontalmente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#quiz-rectangle h2 {
+    color: var(--acus-navy);
+}
+
+/* === 4. PULSANTE INIZIA QUIZ (Rosso CTA: RGB 249, 56, 34) === */
+
+#start-button {
+    background-color: var(--acus-red);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover {
+    background-color: #C02222; /* Tonalità più scura per l'effetto hover */
+}
